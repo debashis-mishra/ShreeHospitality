@@ -1,6 +1,6 @@
 import About from "../components/About";
-import Hotels from "../components/hotels";
-import Footer from "../components/footer";
+import Hotels from "../components/Hotels";
+import Footer from "../components/Footer";
 import styled from "styled-components";
 
 import "./home.css";
