@@ -1,0 +1,57 @@
+/* Import modern font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  /* Use Poppins as the primary font */
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  /* Light gray background for contrast */
+  color: #333;
+  line-height: 1.6;
+}
+
+.signin-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.signin-container input {
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.signin-container button {
+  padding: 10px 20px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.signin-container button:hover {
+  background: #0056b3;
+}
+
+.hotel-details-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.confirmation-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.admin-dashboard-container {
+  padding: 20px;
+}
+
+.admin-section {
+  margin-bottom: 20px;
+}

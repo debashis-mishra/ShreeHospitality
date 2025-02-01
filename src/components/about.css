@@ -1,0 +1,164 @@
+/* About, Contact, and Address Section */
+.about-contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    justify-items: center;
+    align-items: stretch;
+}
+
+/* Common styles for About, Contact, and Address */
+.about,
+.contact,
+.address {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Distributes content and button */
+    height: 100%;
+    min-width: 270px;
+    /* Ensure cards have a minimum width */
+}
+
+/* Title bar */
+.about .title-bar,
+.contact .title-bar,
+.address .title-bar {
+    width: 100%;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 0.6rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    font-family: 'Inter', sans-serif;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+/* Content area */
+.about-content,
+.contact-content,
+.address-content {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    font-family: 'Poppins', sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    flex-grow: 1;
+    /* Pushes button to the bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Truncate text */
+.about-content p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* Restrict to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    max-height: 3rem;
+}
+
+/* View More container */
+.view-more-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    /* Pushes the button to the bottom */
+}
+
+/* View More button */
+.view-more-btn {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.view-more-btn:hover {
+    background-color: #4a4a4a;
+}
+
+/* Popup Overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+    /* Prevents pop-up from touching screen edges */
+}
+
+/* Popup Content */
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    max-height: 80vh;
+    /* Prevents full-screen coverage */
+    overflow-y: auto;
+    /* Enables scrolling when content is long */
+    text-align: left;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+.close-btn {
+    position: sticky;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-contact {
+        grid-template-columns: 1fr;
+        /* Stacks the cards vertically */
+    }
+
+    .popup-content {
+        width: 90%;
+        max-height: 70vh;
+        /* Smaller pop-up height for mobile */
+    }
+}
