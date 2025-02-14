@@ -64,7 +64,7 @@ export default function Hotels() {
 
   const hotels = [
     { id: "1", name: "Bali Ghara", price: "Rs X", thumbnail: hotel1 },
-    // { id: "2", name: "Hotel B", price: "Rs Y", thumbnail: hotel2 },
+    { id: "2", name: "Hotel B", price: "Rs Y", thumbnail: hotel2 },
   ];
 
   const handleGalleryClick = (id, comingSoon) => {
@@ -103,6 +103,7 @@ export default function Hotels() {
             <BlueButtons onClick={handleViewOnMap} disabled={hotel.comingSoon}>
               View on Map
             </BlueButtons>
+            <BookButton onClick={handleBookNow}>Book</BookButton>
           </div>
         </div>
       ))}
